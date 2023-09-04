@@ -3,30 +3,52 @@ import Card from "../card/card.component";
 import './cards-list.styles.css'
 
 
-
-class CardList extends Component {
-
-
-    render() {
-        const { geniuses } = this.props
-
-        return (
-            <div className="card-list">
-
-                {geniuses.map(genius => {
+const CardList = ({polyMaths}) => {
 
 
-                    return (
-                        <Card genius={genius} />
-                    )
-                
-                
-    })}
+    
+    return (
+        <div className="card-list">
+        
+            {polyMaths.map(polymath => {
+                return (
+                    <Card polymath={polymath} />
+                )               
+            })}
+        
+        </div>
+                    
 
 
-            </div>
-        )
-    }
+
+    )
 }
+
+
+
+// class CardList extends Component {
+
+
+//     render() {
+//         const { geniuses } = this.props
+
+//         return (
+//             <div className="card-list">
+
+//                 {geniuses.map(genius => {
+
+
+//                     return (
+//                         <Card genius={genius} />
+//                     )
+                
+                
+//     })}
+
+
+//             </div>
+//         )
+//     }
+// }
 
 export default CardList;
